@@ -20,3 +20,4 @@
 # Netlify Forms processing
 [build]
   publish = "."
+  command = "echo 'Building...'"
