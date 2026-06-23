@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Thank You — Ethica Solution</title>
+<meta name="description" content="Your enquiry has been received. We will respond within one business day.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+:root {
+  --black: #0a0a0a;
+  --white: #ffffff;
+  --grey3: #6b6b6b;
+  --grey4: #a8a8a8;
+  --display: 'Playfair Display', Georgia, serif;
+  --body: 'DM Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+}
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; font-size: 16px; }
+body {
+  background: var(--black);
+  color: var(--white);
+  font-family: var(--body);
+  font-weight: 400;
+  line-height: 1.6;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  padding: 2rem;
+}
+.success-container {
+  text-align: center;
+  max-width: 480px;
+}
+.success-icon {
+  width: 60px;
+  height: 60px;
+  border: 2px solid var(--white);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 2rem;
+  position: relative;
+}
+.success-icon::before {
+  content: '';
+  position: absolute;
+  inset: 6px;
+  border: 1px solid rgba(255,255,255,0.3);
+}
+.success-check {
+  font-size: 1.5rem;
+  color: var(--white);
+}
+h1 {
+  font-family: var(--display);
+  font-size: clamp(2rem, 5vw, 3rem);
+  font-weight: 400;
+  line-height: 1.1;
+  margin-bottom: 1.5rem;
+  letter-spacing: -0.02em;
+}
+p {
+  font-size: 1rem;
+  line-height: 1.7;
+  color: var(--grey4);
+  margin-bottom: 2rem;
+}
+.btn-back {
+  display: inline-block;
+  font-size: 0.813rem;
+  font-weight: 500;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--black);
+  background: var(--white);
+  padding: 0.85rem 2.25rem;
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+  text-decoration: none;
+}
+.btn-back:hover {
+  background: #f5f4f0;
+  transform: translateY(-2px);
+}
+</style>
+</head>
+<body>
+<div class="success-container">
+  <div class="success-icon"><span class="success-check">✓</span></div>
+  <h1>Thank you for your enquiry</h1>
+  <p>We have received your message and will respond within one business day. All enquiries are treated as confidential.</p>
+  <a href="/" class="btn-back">Return to Home</a>
+</div>
+</body>
+</html>
