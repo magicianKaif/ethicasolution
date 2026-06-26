@@ -1786,7 +1786,6 @@ button { font-family: var(--body); cursor: pointer; border: none; background: no
             <li class="onboard-step reveal reveal-d2"><span class="step-num">—</span><div><div class="step-title">Authentication and Session Security</div><div class="step-body">Login bypass, session fixation, token predictability, and MFA circumvention.</div></div></li>
             <li class="onboard-step reveal"><span class="step-num">—</span><div><div class="step-title">Injection and Client-Side Vulnerabilities</div><div class="step-body">SQLi, XSS, CSRF, SSRF, XXE, and file upload abuse testing.</div></div></li>
           </ul>
-          <div style="margin-top:2.5rem" class="reveal"><a class="btn-primary" href="#" onclick="nav('contact')">Request Web Assessment</a></div>
         </div>
         <div class="reveal reveal-d1">
           <div class="report-terminal">
@@ -1826,7 +1825,6 @@ button { font-family: var(--body); cursor: pointer; border: none; background: no
         <div style="background:var(--black);padding:2.5rem 2rem"><div class="method-phase">Category</div><div class="method-name">Data Exposure</div><div class="method-body">Excessive data in responses, error leakage, sensitive field exposure, mass assignment vulnerabilities.</div></div>
         <div style="background:var(--black);padding:2.5rem 2rem"><div class="method-phase">Category</div><div class="method-name">Rate and Logic</div><div class="method-body">Rate limiting bypass, GraphQL introspection abuse, injection via query parameters, and batching attacks.</div></div>
       </div>
-      <div style="margin-top:2.5rem" class="reveal"><a class="btn-primary" href="#" onclick="nav('contact')">Request API Assessment</a></div>
     </div>
   </section>
 
@@ -1842,7 +1840,6 @@ button { font-family: var(--body); cursor: pointer; border: none; background: no
         <div style="background:var(--black);padding:3rem"><div class="method-phase" style="margin-bottom:1.25rem">Android</div><ul style="list-style:none;display:flex;flex-direction:column;gap:0.75rem"><li class="t-small" style="color:var(--grey4)">APK decompilation and static analysis</li><li class="t-small" style="color:var(--grey4)">Insecure data storage — SQLite, SharedPreferences, external storage</li><li class="t-small" style="color:var(--grey4)">Insecure communication and SSL pinning bypass</li><li class="t-small" style="color:var(--grey4)">Dynamic instrumentation via Frida</li><li class="t-small" style="color:var(--grey4)">Reverse engineering and binary analysis</li></ul></div>
         <div style="background:var(--black);padding:3rem"><div class="method-phase" style="margin-bottom:1.25rem">Backend API Layer</div><ul style="list-style:none;display:flex;flex-direction:column;gap:0.75rem"><li class="t-small" style="color:var(--grey4)">Full API security review conducted alongside the mobile assessment</li><li class="t-small" style="color:var(--grey4)">Authentication and session handling analysis</li><li class="t-small" style="color:var(--grey4)">Access control across all mobile-facing endpoints</li><li class="t-small" style="color:var(--grey4)">Token and key management review</li><li class="t-small" style="color:var(--grey4)">Sensitive data exposure in API responses</li></ul></div>
       </div>
-      <div style="margin-top:2.5rem" class="reveal"><a class="btn-primary" href="#" onclick="nav('contact')">Request Mobile Assessment</a></div>
     </div>
   </section>
 
@@ -1918,11 +1915,11 @@ button { font-family: var(--body); cursor: pointer; border: none; background: no
           <span class="factor">Full PoC included</span>
         </div>
       </div>
-      <div style="margin-top:2.5rem" class="reveal"><a class="btn-primary" href="#" onclick="nav('contact')">Request Agentic Assessment</a></div>
     </div>
   </section>
 
   <section class="cta-section"><div class="container"><p class="t-eyebrow reveal" style="margin-bottom:1.25rem">Get Started</p><h2 class="t-h2 reveal reveal-d1">Not sure which assessment you need?</h2><p class="t-body reveal reveal-d2" style="margin-top:1.25rem">Tell us about your organisation and we will recommend the right engagement.</p><div class="cta-actions reveal reveal-d3" style="margin-top:3rem"><a class="btn-primary" href="#" onclick="nav('contact')">Speak with Us</a></div></div></section>
+</div>
 
 <!-- ═══════════════════════════ ABOUT ═══════════════════════════ -->
 <div class="page" id="page-about">
@@ -2103,8 +2100,7 @@ button { font-family: var(--body); cursor: pointer; border: none; background: no
         </form>
       </div>
       <div class="contact-info-block reveal reveal-d1">
-        <div class="info-item"><div class="info-label">Primary Email</div><div class="info-value" id="email-primary"></div></div>
-        <div class="info-item"><div class="info-label">Business Email</div><div class="info-value" id="email-business"></div></div>
+        <div class="info-item"><div class="info-label">Email</div><div class="info-value" id="email-primary"></div></div>
         <div class="info-item"><div class="info-label">Response Time</div><div class="info-value">Within one business day</div></div>
         <div class="info-item"><div class="info-label">Location</div><div class="info-value">India — Remote engagements worldwide</div></div>
         <div class="info-item"><div class="info-label">Confidentiality</div><div class="info-value" style="font-size:0.875rem;font-weight:400;color:var(--grey4);line-height:1.65">All enquiries are treated as confidential. A mutual NDA is executed before any technical discussion begins.</div></div>
@@ -2283,10 +2279,8 @@ function decodeEmail(encoded) {
     return String.fromCharCode((c <= 'Z' ? 90 : 122) >= (c.charCodeAt(0) + 13) ? c.charCodeAt(0) + 13 : c.charCodeAt(0) - 13);
   });
 }
-const primaryEmail = decodeEmail('nxvfsnixu5006@tznvy.pbz');
-const businessEmail = decodeEmail('qnzbafnyinber884010@tznvy.pbz');
+const primaryEmail = decodeEmail('xnvsfunvxu5006@tznvy.pbz');
 document.getElementById('email-primary').innerHTML = '<a href="mailto:' + primaryEmail + '">' + primaryEmail + '</a>';
-document.getElementById('email-business').innerHTML = '<a href="mailto:' + businessEmail + '">' + businessEmail + '</a>';
 </script>
 </body>
 </html>
