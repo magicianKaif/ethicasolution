@@ -1356,11 +1356,11 @@ button { font-family: var(--body); cursor: pointer; border: none; background: no
           </p>
           <div class="intro-stat-row reveal reveal-d3">
             <div>
-              <div class="stat-num">40+</div>
+              <div class="stat-num">5+</div>
               <div class="stat-label">Applications Tested</div>
             </div>
             <div>
-              <div class="stat-num">200+</div>
+              <div class="stat-num">50+</div>
               <div class="stat-label">Vulnerabilities Found</div>
             </div>
             <div>
@@ -1439,6 +1439,11 @@ button { font-family: var(--body); cursor: pointer; border: none; background: no
           <div class="service-name">Security Consulting</div>
           <div class="service-index">06</div>
           <div class="service-desc">Architecture review, threat modelling, secure code review, risk assessment</div>
+        </li>
+        <li class="service-row" onclick="nav('services')">
+          <div class="service-name">Agentic AI Penetration Testing</div>
+          <div class="service-index">07</div>
+          <div class="service-desc">AI-driven autonomous security testing — agentic workflows conduct recon, attack-surface mapping and vulnerability discovery at machine speed, with human oversight on every critical finding</div>
         </li>
       </ul>
     </div>
@@ -1526,7 +1531,7 @@ button { font-family: var(--body); cursor: pointer; border: none; background: no
             <div class="finding-row"><span class="sev sev-med">Medium</span><span class="finding-name">Insecure Direct Object Reference on document API</span></div>
           </div>
           <div style="margin-top:2.5rem" class="reveal">
-            <a class="btn-primary" href="#" onclick="nav('contact')">Request Sample Report</a>
+            <a class="btn-primary" href="/sample_pentest_report.pdf" download="Ethica-Solution-Sample-Pentest-Report.pdf">Download Sample Report</a>
           </div>
         </div>
         <div class="reveal reveal-d1">
@@ -1874,8 +1879,50 @@ button { font-family: var(--body); cursor: pointer; border: none; background: no
     </div>
   </section>
 
+  <div class="section-rule"><div class="container"></div></div>
+
+  <!-- AGENTIC PENTEST -->
+  <section class="section">
+    <div class="container">
+      <p class="t-eyebrow reveal" style="margin-bottom:1.25rem">07 — Agentic AI</p>
+      <h2 class="t-h2 reveal reveal-d1" style="margin-bottom:1.5rem">Agentic AI Penetration Testing</h2>
+      <p class="t-body reveal reveal-d2" style="max-width:620px;margin-bottom:3rem">We combine autonomous AI agents with human-led analysis to conduct penetration tests at a speed and surface-coverage that manual-only engagements cannot match. The AI handles reconnaissance, enumeration, and attack-surface mapping — our analysts direct the strategy, validate every finding, and write every report.</p>
+      <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:2px;background:var(--rule-dk)" class="reveal">
+        <div style="background:var(--black);padding:2.5rem 2rem">
+          <div class="method-phase" style="margin-bottom:1.25rem">Phase 01 — AI</div>
+          <div class="method-name" style="margin-bottom:0.75rem">Autonomous Recon</div>
+          <div class="method-body">Agentic workflows perform continuous passive and active reconnaissance — subdomain enumeration, endpoint discovery, and technology fingerprinting — without manual bottlenecks.</div>
+        </div>
+        <div style="background:var(--black);padding:2.5rem 2rem">
+          <div class="method-phase" style="margin-bottom:1.25rem">Phase 02 — Hybrid</div>
+          <div class="method-name" style="margin-bottom:0.75rem">AI-Augmented Attack Surface</div>
+          <div class="method-body">AI maps every discovered endpoint and parameter against known vulnerability patterns. Human analysts then prioritise and direct targeted exploitation where it matters most.</div>
+        </div>
+        <div style="background:var(--black);padding:2.5rem 2rem">
+          <div class="method-phase" style="margin-bottom:1.25rem">Phase 03 — Human</div>
+          <div class="method-name" style="margin-bottom:0.75rem">Human Validation and Reporting</div>
+          <div class="method-body">Every potential finding is manually confirmed before inclusion in the report. No false positives. Full CVSS scoring, working PoC, and remediation guidance — written by practitioners.</div>
+        </div>
+      </div>
+      <div style="margin-top:2.5rem;padding:2.5rem;border:1px solid var(--rule-dk);display:grid;grid-template-columns:1fr 2fr;gap:3rem;align-items:center" class="reveal reveal-d1">
+        <div>
+          <div style="font-family:var(--mono);font-size:0.688rem;letter-spacing:0.12em;color:var(--grey3);text-transform:uppercase;margin-bottom:1rem">Why Agentic Testing</div>
+          <div style="font-family:var(--display);font-size:1.5rem;font-weight:400;line-height:1.3">Machine speed.<br>Human judgment.</div>
+        </div>
+        <div style="display:flex;flex-wrap:wrap;gap:0.75rem">
+          <span class="factor">Broader attack surface coverage</span>
+          <span class="factor">Faster reconnaissance</span>
+          <span class="factor">AI-driven pattern matching</span>
+          <span class="factor">Human-validated findings only</span>
+          <span class="factor">Same report quality</span>
+          <span class="factor">Full PoC included</span>
+        </div>
+      </div>
+      <div style="margin-top:2.5rem" class="reveal"><a class="btn-primary" href="#" onclick="nav('contact')">Request Agentic Assessment</a></div>
+    </div>
+  </section>
+
   <section class="cta-section"><div class="container"><p class="t-eyebrow reveal" style="margin-bottom:1.25rem">Get Started</p><h2 class="t-h2 reveal reveal-d1">Not sure which assessment you need?</h2><p class="t-body reveal reveal-d2" style="margin-top:1.25rem">Tell us about your organisation and we will recommend the right engagement.</p><div class="cta-actions reveal reveal-d3" style="margin-top:3rem"><a class="btn-primary" href="#" onclick="nav('contact')">Speak with Us</a></div></div></section>
-</div>
 
 <!-- ═══════════════════════════ ABOUT ═══════════════════════════ -->
 <div class="page" id="page-about">
@@ -2041,7 +2088,7 @@ button { font-family: var(--body); cursor: pointer; border: none; background: no
             <div class="form-group"><label class="form-label">Website or Application URL</label><input class="form-input" type="url" name="website" placeholder="https://"></div>
           </div>
           <div class="form-group"><label class="form-label">Service Required</label>
-            <select class="form-select" name="service" required><option value="">Select a service...</option><option>Web Application Penetration Testing</option><option>API Security Testing</option><option>VAPT</option><option>Mobile Security Testing</option><option>Desktop Application Testing</option><option>Secure Code Review</option><option>Security Consulting</option><option>Unsure — Require Guidance</option></select>
+            <select class="form-select" name="service" required><option value="">Select a service...</option><option>Web Application Penetration Testing</option><option>API Security Testing</option><option>VAPT</option><option>Mobile Security Testing</option><option>Desktop Application Testing</option><option>Secure Code Review</option><option>Security Consulting</option><option>Agentic AI Penetration Testing</option><option>Unsure — Require Guidance</option></select>
           </div>
           <div class="form-row">
             <div class="form-group"><label class="form-label">Budget Range</label>
