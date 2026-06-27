@@ -1749,7 +1749,7 @@ button { font-family: var(--body); cursor: pointer; border: none; background: no
         </div>
         <div class="footer-col">
           <h4>Contact</h4>
-          <a href="mailto:kaifshaikh5006@gmail.com">kaifshaikh5006@gmail.com</a>
+          <span id="email-footer"></span>
           <a href="#" onclick="nav('contact')">Request Assessment</a>
           <a href="#" onclick="nav('contact')">Book Consultation</a>
         </div>
@@ -2055,13 +2055,17 @@ button { font-family: var(--body); cursor: pointer; border: none; background: no
     <div style="margin-top:5rem;display:grid;grid-template-columns:1fr 1fr;gap:6rem;align-items:start">
       <div><p class="t-eyebrow reveal" style="margin-bottom:1.25rem">Send an Enquiry</p><h2 class="t-h2 reveal reveal-d1" style="font-size:clamp(1.5rem,3vw,2.25rem)">Tell us about your idea</h2><p class="t-body reveal reveal-d2" style="margin-top:1.25rem">Fill in the form and we will respond within one business day to discuss whether there is a productive fit.</p></div>
       <div class="reveal">
-        <div class="form-group"><label class="form-label">Full Name</label><input class="form-input" type="text" placeholder="Your name"></div>
-        <div class="form-group"><label class="form-label">Email</label><input class="form-input" type="email" placeholder="your@email.com"></div>
-        <div class="form-group"><label class="form-label">Collaboration Type</label>
-          <select class="form-select"><option value="">Select...</option><option>Security Research</option><option>Bug Bounty Partnership</option><option>Tool Development</option><option>Joint Assessment</option><option>Mentorship</option><option>Other</option></select>
-        </div>
-        <div class="form-group"><label class="form-label">Your Proposal</label><textarea class="form-textarea" placeholder="Describe your idea and how you think we could work together effectively."></textarea></div>
-        <button class="form-submit">Submit Proposal</button>
+        <form name="collaborate" method="POST" data-netlify="true" netlify-honeypot="bot-field" action="/success.html">
+          <input type="hidden" name="form-name" value="collaborate">
+          <p class="hidden" style="display:none"><label>Don't fill this out: <input name="bot-field"></label></p>
+          <div class="form-group"><label class="form-label">Full Name</label><input class="form-input" type="text" name="name" placeholder="Your name" required></div>
+          <div class="form-group"><label class="form-label">Email</label><input class="form-input" type="email" name="email" placeholder="your@email.com" required></div>
+          <div class="form-group"><label class="form-label">Collaboration Type</label>
+            <select class="form-select" name="collab-type" required><option value="">Select...</option><option>Security Research</option><option>Bug Bounty Partnership</option><option>Tool Development</option><option>Joint Assessment</option><option>Mentorship</option><option>Other</option></select>
+          </div>
+          <div class="form-group"><label class="form-label">Your Proposal</label><textarea class="form-textarea" name="proposal" placeholder="Describe your idea and how you think we could work together effectively."></textarea></div>
+          <button type="submit" class="form-submit">Submit Proposal</button>
+        </form>
       </div>
     </div>
   </div></section>
@@ -2281,6 +2285,7 @@ function decodeEmail(encoded) {
 }
 const primaryEmail = decodeEmail('xnvsfunvxu5006@tznvy.pbz');
 document.getElementById('email-primary').innerHTML = '<a href="mailto:' + primaryEmail + '">' + primaryEmail + '</a>';
+document.getElementById('email-footer').innerHTML = '<a href="mailto:' + primaryEmail + '">' + primaryEmail + '</a>';
 </script>
 </body>
 </html>
